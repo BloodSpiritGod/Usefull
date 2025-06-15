@@ -122,12 +122,19 @@ public  class U {
 		return result;
 	}
 	
+	/**
+	 * 
+	 * @param the char that is replacing the target char
+	 * @param a normal String
+	 * @param the index of the target char that needs to be replaced
+	 * @return
+	 */
 	
 	public static String replaceChar (char t, String word, int index) {
 		String result = "";
 	    
 		char[] platz = word.toCharArray();
-		
+		if (!(index >= platz.length))
 		platz[index] = t;
 		for (int i = 0; i < platz.length; i++) {
 			result += platz[i];
@@ -139,12 +146,22 @@ public  class U {
 		return result;
 	}
 	
-	public static String removeChar (String word, int a, int b) {
+	/**
+	 * 
+	 * @param a normal String
+	 * @param the index of the char that is to be removed
+	 * @return
+	 */
+	
+	
+	public static String removeChar (String word, int a) {
 		String result = "";
 		char[] platz = word.toCharArray();
 		
-		for (int i = a; i < b+1; i++) {
-			
+		for (int i = 0; i < platz.length; i++) {
+			if (i != a) {
+				result += platz[i];
+			}
 		}
 		
 		
